@@ -1,0 +1,30 @@
+<view>
+  <text class='section__title'>Icons - success</text>
+  <view>
+    <block wx:for='{{[10,30,50,70,90]}}'>
+    <icon type='success' size='{{item}}' color='red'></icon>
+    </block>
+  </view>
+</view>
+
+<view>
+  <text class='section__title'>Icons - all types</text>
+    <view>
+      <block wx:for='{{iconTypes}}' wx:for-item='iconType'>
+        <icon type='{{iconType}}' size='30'></icon>
+      </block>
+    </view>
+</view>
+
+<view>
+  <text class='section__title'>progress</text>
+  <view>
+    <progress percent='50' show-info stroke-width='20' activeColor='blue' backgroundColor='gray' active active-mode='backwards'></progress>
+  </view>
+</view>
+
+<view>
+  <text class='section__title'>Rich text</text>
+  <div style='font-size:20pt'>20pt</div>
+  <rich-text nodes='{{richText}}' style='font-size:30pt'>sss</rich-text>
+</view>

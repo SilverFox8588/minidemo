@@ -1,0 +1,126 @@
+
+
+.body {
+    position: relative;
+    width: 98%;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.wx-grid {
+    overflow: hidden;
+    color: #fff;
+}
+ 
+.wx-cell {
+    position: relative;
+    float: left;
+    width: 33.33333333%;
+    box-sizing: border-box;
+    align-content: center;
+    border: 1px solid #fff;
+}
+  
+.wx-content_bg {
+    position: relative;
+    float: left;
+    padding: 0px 0px;
+    height:120px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: orange;
+}
+
+  .wx-content_bg:active {
+    background-color:olive;
+} 
+
+.wx-content-today_bg{
+    position: relative;
+    float: left;
+    padding: 0px 0px;
+    height:120px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color:olive;
+}
+ 
+.wx-content_date {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.wx-content_type {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 17px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.wx-content_lowheigh{
+  position: absolute;
+  bottom: 1px;
+  text-align: center;
+  font-size: 12px;
+  width: 100%;
+}
+
+.topSection{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom:10px;
+}
+
+.search{
+  display: flex;
+  width: 88%;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 2px; 
+  border: 1px gray solid;
+}
+
+.search input{
+  width: 88%;
+  height: 30px;
+  margin-right: 3px;
+}
+
+.search icon{
+  width: 20px;
+  margin-top: 6px;
+}
+
+.historySection{
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom:10px;
+}
+
+.city{
+  margin: 3px;
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.banner{
+  padding: 3px;
+}
+
+.img {
+  margin-top: 4px;
+  margin-left:5px; 
+  width: 16px;
+  height: 22px;
+}

@@ -1,0 +1,69 @@
+
+<view class='formdemo'>
+<form bindsubmit='formSubmit' bindreset='formReset'>
+
+<view class='section__title'>基本信息</view>
+<view class='itemView'>
+<label class='label'>姓名：</label><input class='input' name='name' type='text' placeholder='请填写您的身份证姓名'></input>
+</view>
+
+<view class='itemView'>
+<label class='label'>身份证：</label><input class='input' name='shenfen' type='idcard' placeholder='请填写您的身份证号'></input>
+</view>
+
+<view class='itemView'>
+<label class='label'>年龄：</label><input class='input' name='age' type='number' value='' placeholder='请填写您的年龄'></input>
+</view>
+
+<view class='itemView'>
+<label class='label'>身高：</label><input class='input' name='high' type='digit' placeholder='请填写您的身高'></input>
+</view>
+
+<view class='itemView'>
+  <label class='label'>出生年月：</label>
+  <picker name='birthdate' class='picker' mode='date' start='1900-01-01' end='2010-01-01' value='{{birthdate}}' bindchange='bindbirthdatechange'>
+    <view class='pickerview'>
+        {{birthdate}}
+      </view>
+  </picker>
+</view>
+
+<view class='itemView'>
+  <label class='label'>性别：</label>
+  <radio-group class='marginleft10' name='gender' bindchange='genderChange'>
+    <radio value='1'>男</radio>
+    <radio style='margin-left:12px;' value='2' checked='true' color='green'>女</radio>
+  </radio-group>
+</view>
+
+<view class='itemView'>
+  <label class='label'>职业：</label>
+  <picker name='job' class='picker' mode='selector' range='{{jobs}}' range-key='name' value='{{jobindex}}' bindchange='bindjobchange'>
+    <view class='pickerview'>
+        {{jobs[jobindex].name}}
+      </view>
+  </picker>
+</view>
+
+<view class='itemView'>
+  <label class='label'>是否可用：</label>
+  <switch name='enabled' class='marginleft10' type='checkbox2' checked='false' bindchange='bindenabledchange'/> 
+</view>
+
+<view class='section__title'>兴趣爱好</view>
+<checkbox-group name='hobbies' class='marginleft2' bindchange='checkboxChange'>
+  <checkbox value='1'>看书</checkbox>
+  <checkbox class='marginleft10' value='2' checked='true'>踢球</checkbox>
+  <checkbox class='marginleft10' value='3'>爬山</checkbox>
+  <checkbox class='marginleft10' value='4'>游泳</checkbox>
+</checkbox-group>
+
+<view class='section__title'>其他</view>
+<textarea name='desc' class='textarea' placeholder='请填写描述信息'></textarea>
+
+<view class='btnArea'>
+  <button hover-class='btnhover' loading='true' style='margin-right:5px;' size='mini' type='primary' form-type='submit'>提交</button>
+  <button size='mini' form-type='reset'>重置</button>
+</view>
+</form>
+</view>

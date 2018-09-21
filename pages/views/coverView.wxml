@@ -1,0 +1,22 @@
+<view class='section__title'>Cover-view & Cover-image & video</view>
+<video id="myVideo" src="{{videoPath}}" controls="{{false}}" event-model="bubble">
+  <cover-view class="controls">
+    <cover-view class="play" bindtap="play">
+      <cover-image class='img' src='/pictures/play.jpg'></cover-image>
+    </cover-view>
+    <cover-view class="pause" bindtap="pause">
+      <cover-image class="img" src="/pictures/pause.jpg" />
+    </cover-view>
+    <cover-view class="time">{{showText}}</cover-view>
+  </cover-view>
+</video>
+<view>
+<button class='button' bindtap='selectSource'>选择视频源</button>
+<view>
+<text>tempFilePath: {{videoInfo.tempFilePath + '\n'}}</text>
+<text>duration: {{videoInfo.duration+ ' s\n'}}</text>
+<text>size: {{videoInfo.size/1024/1024+ ' MB\n'}}</text>
+<text>height: {{videoInfo.height+ '\n'}}</text>
+<text>width: {{videoInfo.width+ '\n'}}</text>
+</view>
+</view>

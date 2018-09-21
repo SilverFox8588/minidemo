@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/formControls/login",
+    "pages/formControls/formControls",
+    "pages/weather/weather",
+    "pages/basicControls/basicControls",
+    "pages/views/coverView",
+    "pages/views/movableView",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

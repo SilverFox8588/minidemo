@@ -1,0 +1,23 @@
+<view>
+<view class="section__title">movable-view test</view>
+<movable-area class="movableArea">
+<movable-view class="movableView" direction="all" bindchange="onMove"></movable-view>
+</movable-area>
+<view>x: {{detail.x}}px    y: {{detail.y}}px</view>
+
+  <view class="section__title">movable-view区域小于movable-area</view>
+  <movable-area style="height: 200px; width: 200px; background: red;">
+    <movable-view style="height: 50px; width: 50px; background: blue;" x="{{x}}" y="{{y}}" direction="all">
+    </movable-view>
+  </movable-area>
+
+  <view>
+    <button class="commonButton" bindtap="buttonTap">Move to (30px, 30px)</button>
+  </view>
+
+  <view class="section__title">movable-view区域大于movable-area</view>
+  <movable-area style="height: 100px; width: 100px; background: red;">
+    <movable-view style="height: 200px; width: 200px; background: blue;" direction="all">
+    </movable-view>
+  </movable-area>
+</view>

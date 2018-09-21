@@ -1,0 +1,42 @@
+<view class='body'>
+    <view class='topSection'>
+      <view class='search'>
+        <input type='text' value='{{currentCity}}' confirm-type='search' bindinput="cityInput"></input>
+        <icon type='search' size='20' color='black' bindtap='search'></icon>
+      </view>
+      <view class='banner' bindtap='getLocation'>
+        <image class='img' mode='aspecFit' src='/pictures/loc.jpg'></image>
+      </view>
+    </view>
+
+    <view class="wx-grid">
+      <view class="wx-cell" hidden='{{weatherInfo.data.yesterday==""}}'>
+        <navigator>
+          <view class='wx-content_bg'>
+            <view class="wx-content_date">
+                {{weatherInfo.data.yesterday.date}}
+            </view>
+            <text class="wx-content_type">{{weatherInfo.data.yesterday.type}}</text>
+            <view class="wx-content_lowheigh">{{weatherInfo.data.yesterday.low}} - {{weatherInfo.data.yesterday.high}}</view>
+          </view>
+        </navigator>
+      </view>
+      <view class="wx-cell" wx:for="{{weatherInfo.data.forecast}}" wx:key>
+          <navigator>
+              <view class='{{index==0?"wx-content-today_bg":"wx-content_bg"}}'>
+                  <view class="wx-content_date">
+                      {{item.date}}
+                  </view>
+                  <text class="wx-content_type">{{item.type}}</text>
+                  <view class="wx-content_lowheigh">{{item.low}} - {{item.high}}</view>
+              </view>
+          </navigator>
+      </view>
+    </view>
+
+    <view class='historySection'>
+      <view class='city' wx:for='{{historyCities}}' wx:key>
+        <view bindtap='historyCityClick' data-value='{{item}}'>{{item}}</view>
+      </view>
+    </view>
+</view>

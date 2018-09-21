@@ -1,0 +1,16 @@
+<view class="itemView">
+  <label class='label'>用户名：</label>
+  <input class="input" name="userName" value='{{userName}}' placeholder="用户名/邮箱" bindinput="userNameInput"/>
+</view>
+<view class="itemView">
+  <label class='label'>密码：</label>
+  <input class="input" password value='{{passWd}}' placeholder="请输入密码" bindinput="passWdInput" />
+</view>
+<view class="viewName">
+  <button class="button" bindtap="loginBtnClick">登录</button>
+  <button class="button" bindtap="resetBtnClick">清除</button>
+</view>
+
+<view class='result'>
+<view>{{infoMess}}</view>
+</view>

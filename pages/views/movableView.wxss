@@ -1,0 +1,17 @@
+.movableArea{
+  background-color: green;
+  height: 400rpx;
+  width: 100%;
+}
+
+.movableView{
+  background-color: red;
+  height: 50px;
+  width: 50px;
+}
+
+.commonButton{
+  background-color: #09bb07;
+  color: #fff;
+  font-size: 18pt;
+}
